@@ -6,16 +6,10 @@ import datetime
 import os
 
 logo_path = os.path.join(os.path.dirname(__file__), "logo.png")
-st.image(logo_path, width=150)
-
-st.set_page_config(
-    page_title="에픽스 H&L 디비 자동 분배기",
-    layout="wide",
-    page_icon="📦"
-)
-
-# 로고 이미지 삽입 (같은 폴더에 logo.png 파일이 존재해야 함)
-st.image("logo.png", width=150)
+if os.path.exists(logo_path):
+    st.image(logo_path, width=150)
+else:
+    st.warning("⚠️ 로고 파일을 찾을 수 없습니다.")
 
 st.title("📦 에픽스 H&L 디비 자동 분배기")
 
