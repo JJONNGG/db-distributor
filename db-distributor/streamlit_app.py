@@ -5,6 +5,9 @@ import pandas as pd
 import datetime
 import os
 
+logo_path = os.path.join(os.path.dirname(__file__), "logo.png")
+st.image(logo_path, width=150)
+
 st.set_page_config(
     page_title="에픽스 H&L 디비 자동 분배기",
     layout="wide",
